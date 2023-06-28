@@ -5,6 +5,25 @@ function numericalValue($n){
     $units = $n - 10 * $tens;
     return $tens + $units;
 }
+/**
+ * Returns true if array $needle is contained in array of arrays $haystack 
+ */
+function in_my_array($needle, $haystack){
+    foreach($haystack as $comparedTo){
+        $shit1 = array_values($needle);
+        $shit2 = array_values($comparedTo);
+        $count1 = count($shit1);
+        $count2 = count($shit2);
+        if($count1 == $count2){
+            $coincidences = 0;
+            for($compt = 0; $compt < $count1; $compt++) {
+                if($shit1[$compt] == $shit2[$compt]) $coincidences++;
+            }
+            if($coincidences == $count1) return true;
+        }
+    }
+    return false;
+}
 
 if(!isset($argv[1])) die("Race Date Not Entered!!\n");
 
@@ -12,6 +31,11 @@ $raceDate = trim($argv[1]);
 $currentDir = __DIR__ . DIRECTORY_SEPARATOR . $raceDate;
 
 $allOdds = include($currentDir . DIRECTORY_SEPARATOR . "getodds.php");
+
+$outFile = $currentDir . DIRECTORY_SEPARATOR . "probas.php";
+if(file_exists($outFile)){
+    $oldData = include($outFile);
+}
 $probas = [];
 
 $reds = [1, 3, 5, 7, 9, 12, 14, 16, 18, 
@@ -39,18 +63,23 @@ for($r=1; $r <= $totalRaces; $r++){
     $probas[$r] = $proba;
 }
 
-$outFile = $currentDir . DIRECTORY_SEPARATOR . "probas.php";
-
 
 $outtext = "<?php\n\n";
 $outtext .= "return [\n";
 
 for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
-    //if($raceNumber == 4) continue;
     if(!isset($probas[$raceNumber])) continue;
 
+    if(isset($oldData)){
+        if(isset($oldData[$raceNumber])){
+            $oldRaceData = $oldData[$raceNumber];
+            if(isset($oldRaceData['wins'])) $oldWINS = $oldRaceData['wins'];
+            if(isset($oldRaceData['SS'])) $oldSS = $oldRaceData['SS'];
+            if(isset($oldRaceData['inters'])) $oldINTERS = $oldRaceData['inters'];
+            if(isset($oldRaceData['qpl/trio'])) $oldQPLTrio = $oldRaceData['qpl/trio'];
+        }
+    }
     $racetext = "";
-    $showRace = false;
 
     $tmpArray = $probas[$raceNumber];
     $runners = array_keys($tmpArray);
@@ -100,46 +129,136 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             }
         }
     }
-    $difference1 = array_diff($toWin, $trio);
-    $difference2 = array_diff($trio, $toWin);
-    $intersection = array_intersect($toWin, $trio);
+    $difference = array_values(array_unique(array_diff($trio, $toWin)));
+    sort($difference);
+    $intersection = array_Values(array_unique(array_intersect($toWin, $trio)));
+    sort($intersection);
 
     // $racetext .= "\t\t'F: " . implode(", ", $favorites) . "',\n";
     // $racetext .= "\t\t'O: " . implode(", ", $others) . "',\n";
 
-    if(count($difference1) == 2) {
-        $showRace = true;
-        $racetext .= "\t\t'Win' =>  '" . implode(", ", $difference1) . "',\n";
-    }
-    if(count($difference2) == 2) {
-        $showRace = true;
-        $racetext .= "\t\t'Win' =>  '" . implode(", ", $difference2) . "',\n";
-    }
-    if(count($intersection) == 2) {
-        $showRace = true;
-        $racetext .= "\t\t'Win' =>  '" . implode(", ", $intersection) . "',\n";
-    }
-
-    if(!empty($difference2)) 
-    {
-        $qin1 = implode(", ", $intersection) . ' X ' . implode(", ", $difference1) . ', ' . implode(", ", $difference2);
-        if(count($difference1) > 1 && count($difference2) > 1) $qin2 = implode(", ", $difference1) . ' X ' . implode(", ", $difference2);
-    }
-    else{
-        $qin1 = implode(", ", $intersection);
-        $qin2 = implode(", ", $intersection) . ' X ' . implode(", ", $difference1);
-    }   
     
-    if(!isset($qin2)){
-        $racetext .= "\t\t'Qin' =>  '" . $qin1 . "',\n";
+    if(isset($oldWINS)) $wins = $oldWINS;
+    else $wins = [];
+
+    if(isset($oldSS)) $SS_ = $oldSS;
+    else $SS_ = [];
+
+    if(isset($oldINTERS)) $inters = $oldINTERS;
+    else $inters = [];
+
+    if(isset($oldQPLTrio)) $qplTrios = $oldQPLTrio;
+    else $qplTrios = [];
+    
+    if(!empty($difference)) {
+        if(!in_my_array($difference, $wins)) $wins[] = $difference;
+        $qin = implode(", ", $intersection) . ' X ' . implode(", ", $difference);
+        $qinValues = array_values(array_unique(array_merge($intersection, $difference)));
     }
     else{
-        $racetext .= "\t\t'Qin1' =>  '" . $qin1 . "',\n";
-        $racetext .= "\t\t'Qin2' =>  '" . $qin2 . "',\n";
-    }
-    $racetext .= "\t],\n";
+        $qin = implode(", ", $intersection);
+        $qinValues = $intersection;
+    } 
 
-    if($showRace) $outtext .= $racetext;
+    if(!in_my_array($intersection, $inters)) $inters[] = $intersection;
+
+    $iInter = [];
+    for($i = 0; $i < count($inters); $i ++){
+        for($j = $i + 1; $j < count($inters); $j ++){
+            $iInter = array_values(array_unique(array_merge($iInter, array_intersect($inters[$i], $inters[$j]))));
+        }
+    }
+
+    $selected = array_values(array_unique(array_merge($intersection, $difference)));
+    $bSelected = array_intersect($selected, $blacks);
+    $rSelected = array_intersect($selected, $reds);
+    sort($bSelected); sort($rSelected);
+    $qplTrio = array_values(array_unique(array_merge($rSelected, $bSelected)));
+    $lastQplTrio = end($qplTrios);
+    if(!empty($lastQplTrio)){
+        $differences = array_diff($qplTrio, $lastQplTrio);
+    }
+    else $differences = [];
+    if(!in_my_array($qplTrio, $qplTrios)) $qplTrios[] = $qplTrio;
+
+    for($i = 1; $i < count($qplTrios); $i++){
+        $differences = array_values(array_unique(array_merge($differences, array_diff($qplTrios[$i], $qplTrios[$i - 1]))));
+    }
+
+    sort($differences);
+
+    $iInter2 = array_diff($iInter, $differences);
+    $_WIN = $iInter2;
+    foreach($wins as $winsItem){
+        $_WIN = array_values(array_unique(array_merge($_WIN, $winsItem)));
+    }
+    sort($_WIN);
+
+    $SS = array_intersect($_WIN, $qinValues);
+    sort($SS);
+    if(!in_my_array($SS, $SS_)) $SS_[] = $SS;
+
+    $iSS = [];
+    for($i = 0; $i < count($SS_); $i ++){
+        for($j = $i + 1; $j < count($SS_); $j ++){
+            $iSS = array_values(array_unique(array_merge($iSS, array_intersect($SS_[$i], $SS_[$j]))));
+        }
+    }
+    sort($iSS);
+    
+    $WINSText = "[";
+    $someCounter = 0;
+    $someLength = count($wins);
+    foreach($wins as $winsItem){
+        $WINSText .= "[" . implode(", ", $winsItem) . "]";
+        $someCounter ++;
+        if($someCounter < $someLength) $WINSText .= ", ";
+    }
+    $WINSText .= "]";
+
+    $SSText = "[";
+    $someCounter = 0;
+    $someLength = count($SS_);
+    foreach($SS_ as $SSItem){
+        $SSText .= "[" . implode(", ", $SSItem) . "]";
+        $someCounter ++;
+        if($someCounter < $someLength) $SSText .= ", ";
+    }
+    $SSText .= "]";
+
+    $INTERSText = "[";
+    $someCounter = 0;
+    $someLength = count($inters);
+    foreach($inters as $intersItem){
+        $INTERSText .= "[" . implode(", ", $intersItem) . "]";
+        $someCounter ++;
+        if($someCounter < $someLength) $INTERSText .= ", ";
+    }
+    $INTERSText .= "]";
+
+    $QPLText = "[";
+    $someCounter = 0;
+    $someLength = count($qplTrios);
+    foreach($qplTrios as $qplItem){
+        $QPLText .= "[" . implode(", ", $qplItem) . "]";
+        $someCounter ++;
+        if($someCounter < $someLength) $QPLText .= ", ";
+    }
+    $QPLText .= "]";
+    $racetext .= "\t\t'wins' =>  $WINSText ,\n";
+    $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
+    $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
+    $racetext .= "\t\t'WIN' =>  '" . implode(", ", $_WIN). "',\n";
+    //$racetext .= "\t\t'qin' =>  '" . $qin . "',\n";
+    $racetext .= "\t\t'S' =>  '" . implode(", ", $SS). "',\n";
+    $racetext .= "\t\t'SS' =>  $SSText ,\n";
+    if(!empty($iSS)) $racetext .= "\t\t'I' =>  '" . implode(", ", $iSS). "',\n";
+    $racetext .= "\t],\n";
+    unset($qin);
+    unset($qinValues);
+    unset($oldWINS);
+    unset($oldQPLTrio);
+    $outtext .= $racetext;
 }
 
 $outtext .= "];\n";

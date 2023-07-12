@@ -12,6 +12,8 @@ function in_my_array($needle, $haystack){
     foreach($haystack as $comparedTo){
         $shit1 = array_values($needle);
         $shit2 = array_values($comparedTo);
+        sort($shit1); 
+        sort($shit2);
         $count1 = count($shit1);
         $count2 = count($shit2);
         if($count1 == $count2){

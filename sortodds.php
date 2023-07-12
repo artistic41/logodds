@@ -230,7 +230,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
     $racetext .= "\t\t'I' =>  '" . implode(", ", $iInter). "',\n";
-    $racetext .= "\t\t'S' =>  '" . implode(", ", $SS). "',\n";
+    //$racetext .= "\t\t'S' =>  '" . implode(", ", $SS). "',\n";
     $racetext .= "\t],\n";
     unset($qin);
     unset($qinValues);

@@ -234,18 +234,19 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     sort($allIntersValues);
     sort($allQplValues);
 
-    
-    $side2 = array_values(array_unique(array_intersect($allWinsValues, $allIntersValues)));
-    $side1 = array_values(array_unique(array_diff($allQplValues, $side2)));
-    
-    $fct = "'" . implode(", ", $side1) . " X " . implode(", ", $side2) . "'";
+    $side1 = array_intersect($allWinsValues, $allIntersValues);
+    $side2 = array_diff($allQplValues, $side1);
+
+    if(count($side1) > count($side2)) $racetext .= "\t\t'WIN' =>  '" . implode(", ", $side1). "',\n";
+    else $racetext .= "\t\t'WIN' =>  '" . implode(", ", $side2). "',\n";
+
+    $fct = "'" . implode(", ", $side2) . " X " . implode(", ", $side1) . "'";
 
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
     $racetext .= "\t\t'Fct' =>  $fct,\n";
-    if(isset($side1[2])) $racetext .= "\t\t'Love' => '" . $side1[2] . "',\n";
     $racetext .= "\t\t'TRIO' =>  '" . implode(", ", $allQplValues). "',\n";
     $racetext .= "\t\t'I' =>  '" . implode(", ", $iInter). "',\n";
     $racetext .= "\t\t'Bet' =>  '" . implode(", ", $betValues). "',\n";

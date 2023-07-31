@@ -211,10 +211,12 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
 
     $betValues = array_diff($allWinsValues, $allIntersValues);
 
+    $allQplValues = [];
     $QPLText = "[";
     $someCounter = 0;
     $someLength = count($qplTrios);
     foreach($qplTrios as $qplItem){
+        $allQplValues = array_values(array_unique(array_merge($allQplValues, $qplItem)));
         $QPLText .= "[" . implode(", ", $qplItem) . "]";
         $someCounter ++;
         if($someCounter < $someLength) $QPLText .= ", ";
@@ -228,10 +230,23 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $iInter = array_diff($iInter, $X);
     $iInter = array_diff($iInter, [$first1]);
 
+    sort($allWinsValues);
+    sort($allIntersValues);
+    sort($allQplValues);
+
+    
+    $side2 = array_values(array_unique(array_intersect($allWinsValues, $allIntersValues)));
+    $side1 = array_values(array_unique(array_diff($allQplValues, $side2)));
+    
+    $fct = "'" . implode(", ", $side1) . " X " . implode(", ", $side2) . "'";
+
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
+    $racetext .= "\t\t'Fct' =>  $fct,\n";
+    if(isset($side1[2])) $racetext .= "\t\t'Love' => '" . $side1[2] . "',\n";
+    $racetext .= "\t\t'TRIO' =>  '" . implode(", ", $allQplValues). "',\n";
     $racetext .= "\t\t'I' =>  '" . implode(", ", $iInter). "',\n";
     $racetext .= "\t\t'Bet' =>  '" . implode(", ", $betValues). "',\n";
     if(isset($NOPLACE)) $racetext .= "\t\t'PLACE' =>  'NO',\n";

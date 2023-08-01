@@ -237,17 +237,44 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $side1 = array_intersect($allWinsValues, $allIntersValues);
     $side2 = array_diff($allQplValues, $side1);
 
-    if(count($side1) > count($side2)) $racetext .= "\t\t'WIN' =>  '" . implode(", ", $side1). "',\n";
-    else $racetext .= "\t\t'WIN' =>  '" . implode(", ", $side2). "',\n";
+    $part1 = array_intersect($side2, $iInter);
+    $part2 = array_diff($side1, $iInter);
 
-    $fct = "'" . implode(", ", $side2) . " X " . implode(", ", $side1) . "'";
+    $fct = "'" . implode(", ", $part1) . " X " . implode(", ", $part2) . "'";
+
+    $SET1 = $allWinsValues;
+    $SET2 = $allIntersValues;
+    $SET3 = $iInter;
+
+    $S1 = array_intersect($SET1, $SET2);
+    $S2 = array_intersect($SET1, $SET3);
+    $S3 = array_intersect($SET2, $SET3);
+    $S4 = array_diff($SET1, $SET2);
+    $S5 = array_diff($SET2, $SET1);
+    $S6 = array_diff($SET1, $SET3);
+    $S7 = array_diff($SET3, $SET1);
+    $S8 = array_diff($SET2, $SET3);
+    $S9 = array_diff($SET3, $SET2);
+
+    $S10 = array_intersect($S3, $S5, $S7);
+    $S11 = array_intersect($S1, $S2, $S3);
+    if(empty($S11)) $S11 = $S1;
+    $S12 = array_intersect($S5, $S8);
+
 
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
     $racetext .= "\t\t'Fct' =>  $fct,\n";
-    $racetext .= "\t\t'TRIO' =>  '" . implode(", ", $allQplValues). "',\n";
+    $racetext .= "\t\t'S3' =>  '" . implode(", ", $S3). "',\n";
+    $racetext .= "\t\t'S5' =>  '" . implode(", ", $S5). "',\n";
+    $racetext .= "\t\t'S6' =>  '" . implode(", ", $S6). "',\n";
+    $racetext .= "\t\t'S7' =>  '" . implode(", ", $S7). "',\n";
+    $racetext .= "\t\t'S8' =>  '" . implode(", ", $S8). "',\n";
+    $racetext .= "\t\t'S9' =>  '" . implode(", ", $S9). "',\n";
+    $racetext .= "\t\t'S10' =>  '" . implode(", ", $S10). "',\n";
+    $racetext .= "\t\t'S12' =>  '" . implode(", ", $S12). "',\n";
     $racetext .= "\t\t'I' =>  '" . implode(", ", $iInter). "',\n";
     $racetext .= "\t\t'Bet' =>  '" . implode(", ", $betValues). "',\n";
     if(isset($NOPLACE)) $racetext .= "\t\t'PLACE' =>  'NO',\n";

@@ -267,13 +267,17 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'inters' =>  $INTERSText ,\n";
     $racetext .= "\t\t'Favorite' =>  '" . $first1. "',\n";
     $racetext .= "\t\t'Fct' =>  $fct,\n";
+    $racetext .= "\t\t'S1' =>  '" . implode(", ", $S1). "',\n";
+    $racetext .= "\t\t'S2' =>  '" . implode(", ", $S2). "',\n";
     $racetext .= "\t\t'S3' =>  '" . implode(", ", $S3). "',\n";
+    $racetext .= "\t\t'S4' =>  '" . implode(", ", $S4). "',\n";
     $racetext .= "\t\t'S5' =>  '" . implode(", ", $S5). "',\n";
     $racetext .= "\t\t'S6' =>  '" . implode(", ", $S6). "',\n";
     $racetext .= "\t\t'S7' =>  '" . implode(", ", $S7). "',\n";
     $racetext .= "\t\t'S8' =>  '" . implode(", ", $S8). "',\n";
     $racetext .= "\t\t'S9' =>  '" . implode(", ", $S9). "',\n";
     $racetext .= "\t\t'S10' =>  '" . implode(", ", $S10). "',\n";
+    $racetext .= "\t\t'S11' =>  '" . implode(", ", $S11). "',\n";
     $racetext .= "\t\t'S12' =>  '" . implode(", ", $S12). "',\n";
     $racetext .= "\t\t'I' =>  '" . implode(", ", $iInter). "',\n";
     $racetext .= "\t\t'Bet' =>  '" . implode(", ", $betValues). "',\n";

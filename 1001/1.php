@@ -17,35 +17,35 @@ return [
 		/**
 		Race 2
 		*/
-		'wins' =>  [] ,
-		'qpl/trio' =>  [[3, 1, 7, 10, 4]] ,
-		'inters' =>  [[3, 1, 7, 10, 4]] ,
+		'wins' =>  [[1, 10, 2]] ,
+		'qpl/trio' =>  [[3, 1, 7, 10, 4], [3, 7, 1, 10, 2]] ,
+		'inters' =>  [[3, 1, 7, 10, 4], [3, 7]] ,
 		'Favorite' =>  '3',
 		'Red QPL values'      =>  '3, 1, 7',
-		'Black QPL values'    =>  '10, 4',
-		'Inter QPL' =>  '3, 1, 7, 10, 4',
+		'Black QPL values'    =>  '10, 2, 4',
+		'Inter QPL' =>  '3, 1, 7, 10',
 	],
 	'3' => [
 		/**
 		Race 3
 		*/
-		'wins' =>  [[7, 6]] ,
-		'qpl/trio' =>  [[5, 8, 9, 7, 6]] ,
-		'inters' =>  [[5, 8, 9]] ,
+		'wins' =>  [[7, 6], [8]] ,
+		'qpl/trio' =>  [[5, 8, 9, 7, 6], [5, 7, 1, 2, 8]] ,
+		'inters' =>  [[5, 8, 9], [5, 7, 1, 2]] ,
 		'Favorite' =>  '5',
-		'Red QPL values'      =>  '5, 7, 9',
-		'Black QPL values'    =>  '8, 6',
-		'Inter QPL' =>  '5, 8, 9, 7, 6',
+		'Red QPL values'      =>  '5, 7, 1, 9',
+		'Black QPL values'    =>  '8, 2, 6',
+		'Inter QPL' =>  '5, 8, 7',
 	],
 	'4' => [
 		/**
 		Race 4
 		*/
-		'wins' =>  [] ,
+		'wins' =>  [[12, 1]] ,
 		'qpl/trio' =>  [[7, 1, 12, 4, 2]] ,
-		'inters' =>  [[7, 1, 12, 4, 2]] ,
+		'inters' =>  [[7, 1, 12, 4, 2], [7, 4, 2]] ,
 		'Favorite' =>  '7',
-		'Red QPL values'      =>  '7, 1, 12',
+		'Red QPL values'      =>  '7, 12, 1',
 		'Black QPL values'    =>  '4, 2',
 		'Inter QPL' =>  '7, 1, 12, 4, 2',
 	],
@@ -70,7 +70,7 @@ return [
 		'inters' =>  [[9, 5, 14, 4, 2]] ,
 		'Favorite' =>  '9',
 		'Red QPL values'      =>  '9, 5, 14',
-		'Black QPL values'    =>  '4, 2',
+		'Black QPL values'    =>  '2, 4',
 		'Inter QPL' =>  '9, 5, 14, 4, 2',
 	],
 	'7' => [
@@ -90,13 +90,13 @@ return [
 		Race 9
 		*/
 		'wins' =>  [[8]] ,
-		'qpl/trio' =>  [[6, 4, 5, 1, 8]] ,
-		'inters' =>  [[6, 4, 5, 1]] ,
+		'qpl/trio' =>  [[6, 4, 5, 1, 8], [6, 8, 2, 5, 3]] ,
+		'inters' =>  [[6, 4, 5, 1], [6, 8, 2, 5, 3]] ,
 		'Favorite' =>  '6',
 		'Sure Place'    =>  '6',
-		'Red QPL values'      =>  '5, 1',
-		'Black QPL values'    =>  '6, 8, 4',
-		'Inter QPL' =>  '6, 4, 5, 1, 8',
+		'Red QPL values'      =>  '5, 3, 1',
+		'Black QPL values'    =>  '6, 8, 2, 4',
+		'Inter QPL' =>  '6, 5, 8',
 	],
 	'10' => [
 		/**

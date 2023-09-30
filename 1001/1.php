@@ -22,7 +22,7 @@ return [
 		'inters' =>  [[3, 1, 7, 10, 4], [3, 7], [3, 1, 7, 10, 6], [3, 1, 7, 10, 2], [3, 7, 6], [3, 1, 7], [3, 1, 7, 6]] ,
 		'Favorite' =>  '3',
 		'Red QPL values'      =>  '3, 1, 7',
-		'Black QPL values'    =>  '10, 6, 2, 4',
+		'Black QPL values'    =>  '10, 2, 6, 4',
 		'Inter QPL' =>  '3, 1, 7, 10',
 	],
 	'3' => [
@@ -34,7 +34,7 @@ return [
 		'inters' =>  [[5, 8, 9], [5, 7, 1, 2]] ,
 		'Favorite' =>  '5',
 		'Red QPL values'      =>  '5, 7, 1, 9',
-		'Black QPL values'    =>  '2, 8, 6',
+		'Black QPL values'    =>  '2, 6, 8',
 		'Inter QPL' =>  '5, 7',
 	],
 	'4' => [
@@ -46,7 +46,7 @@ return [
 		'inters' =>  [[7, 1, 12, 4, 2], [7, 4, 2], [7, 12, 1, 4]] ,
 		'Favorite' =>  '7',
 		'Sure Place'    =>  '4',
-		'Red QPL values'      =>  '7, 12, 1',
+		'Red QPL values'      =>  '7, 1, 12',
 		'Black QPL values'    =>  '4, 2',
 		'Inter QPL' =>  '7, 1, 12, 4, 2',
 	],
@@ -111,7 +111,7 @@ return [
 		'inters' =>  [[2, 4, 5, 7], [1, 5, 3, 4, 2], [1, 5, 4, 2], [1, 12, 4, 2], [1, 7, 12, 4, 2], [1, 12, 5, 4, 2], [8, 4, 2, 1, 12], [8, 2, 4, 1, 5], [8, 1, 5]] ,
 		'Favorite' =>  '8',
 		'Red QPL values'      =>  '1, 5, 12, 7, 9, 3',
-		'Black QPL values'    =>  '4, 2, 8',
+		'Black QPL values'    =>  '2, 4, 8',
 		'Inter QPL' =>  '2, 4',
 	],
 ];

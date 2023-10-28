@@ -288,8 +288,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $sPrimes = array_intersect($allQplValues, $primes);
     $primesMajority = count($allQplValues) < 2 * count($sPrimes);
 
-    $racetext .= "\t\t//Total runners: " . count($runners) .  "\n";
-    
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio'       =>  $QPLText ,\n";
     $racetext .= "\t\t'new 2 qpl/trio' =>  $new2QPLText ,\n";
@@ -297,36 +295,22 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'All QPL values'    =>  '" . implode(", ", $allQplValues). "',\n";
     $racetext .= "\t\t'New 2 QPL values'  =>  '" . implode(", ", $new2QplValues). "',\n";
     $racetext .= "\t\t'New 3 QPL values'  =>  '" . implode(", ", $new3QplValues). "',\n";
+
+    $forReference = array_diff($allQplValues, $allWinsValues);
+    $weird = array_diff($runners, $allQplValues);
     
     if($primesMajority){
         $racetext .= "\t\t//Primes majority,\n";
         $racetext .= "\t\t'primes' =>  '" . implode(", ", $sPrimes). "',\n";
-    }
-
-    $forReference = array_diff($allQplValues, $allWinsValues);
-    $forRefPrimes = array_intersect($forReference, $primes);
-    $countPrimes1 = count($forRefPrimes);
-    $racetext .= "\t\t'For reference  ' =>  '" . implode(", ", $forReference). "',//number of primes: $countPrimes1\n";
-    $allWinsPrimes = array_intersect($allWinsValues, $primes);
-    $countPrimes2 = count($allWinsPrimes);
-    $racetext .= "\t\t'All wins values' =>  '" . implode(", ", $allWinsValues). "',//number of primes: $countPrimes2\n";
-    $weird = array_diff($runners, $allQplValues);
-    $weirdPrimes = array_intersect($weird, $primes);
-    $countPrimes3 = count($weirdPrimes);
-    $racetext .= "\t\t'Remaining' =>  '" . implode(", ", $weird). "',//number of primes: $countPrimes3,\n";
-    if(isset($oldRemaining)){
-        $diffRemaining = array_diff($oldRemaining, $weird);
-        if(isset($oldDiff)) {
-            $diffRemaining = array_values(array_unique(array_merge($diffRemaining, $oldDiff)));
+        $racetext .= "\t\t'Place' =>  '" . $first1 . "',\n";
+        $racetext .= "\t\t//HEDGE BETS,\n";
+        $racetext .= "\t\t'Trio/Qin' =>  '" . implode(", ", $forReference). "',\n";
+        $weird = array_values($weird);
+        if(isset($weird[0]) && isset($weird[1])){
+            $racetext .= "\t\t'Hedge Place' =>  '" . $weird[0] . ", " . $weird[1] . "',\n";
         }
-        $racetext .= "\t\t'diff' =>  '" . implode(", ", $diffRemaining). "',\n";
-    }
-    $first6 = array_slice($allQplValues, 0, 6);
-    $iiiinter = array_intersect($first6, $allWinsValues);
-    if(count($iiiinter) >= 3 && count($allQplValues) > 6 ){
-        $racetext .= "\t\t'WIN' =>  '" . implode(", ", $allWinsValues). "',\n";
-        sort($first6);
-        $racetext .= "\t\t'tce??' =>  '" . implode(", ", $first6). "',\n";
+
+
     }
    
     $racetext .= "\t],\n";

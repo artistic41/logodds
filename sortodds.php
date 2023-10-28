@@ -47,6 +47,8 @@ $reds = [1, 3, 5, 7, 9, 12, 14, 16, 18,
 $blacks = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20,
           22, 24, 26, 28, 29, 31, 33, 35];
 
+$primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+
 $totalRaces = count($allOdds);
 
 for($r=1; $r <= $totalRaces; $r++){
@@ -231,34 +233,94 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     }
     $new3QPLText .= "]";
 
-    $inter = array_intersect($new2QplValues, $new3QplValues);
-    $diff1 = array_diff($new2QplValues, $new3QplValues);
-    $diff2 = array_diff($new3QplValues, $new2QplValues);
-    sort($inter);
-    sort($diff1);
-    sort($diff2);
-    $X = array_intersect($diff1, $allWinsValues);
+    //Sort  new2QplValues by odds
+    $qplsOdds = [];
+    foreach($new2QplValues as $iIndex){
+        if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+    }
+    asort($qplsOdds);
+    $new2QplValues = array_keys($qplsOdds);
+
+     //Sort  new3QplValues by odds
+     $qplsOdds = [];
+     foreach($new3QplValues as $iIndex){
+         if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+     }
+     asort($qplsOdds);
+     $new3QplValues = array_keys($qplsOdds);
+
+    $diff = array_diff($new2QplValues, $allWinsValues);
+    $set1 = array_slice($allQplValues, 0, 5);
+    $inter = array_intersect($set1, $diff);
+    $set2 = array_slice($tce, 0, 5);
+    $win = array_diff($set2, $inter);
+    $winSet = array_slice($new2QplValues, 0, 5);
+    $qqpl = array_diff($winSet, $inter);
+    $X1 = array_diff($set1, $win);
+    $X2 = array_diff($set1, $qqpl);
+    $Y1 = array_diff($winSet, $win);
+    $Y2 = array_diff($winSet, $qqpl);
+    $Y = array_values(array_unique(array_merge($Y1, $Y2, $X2)));
+
+    $shit = array_values(array_unique(array_merge($win, $qqpl)));
+    $whatever = array_slice($allQplValues, 0, 2);
+    $place = array_intersect($shit, $whatever);
+
+    $WON = array_diff($tce, $place);
+    $WON = array_diff($tce, $allWinsValues);
+
+     //Sort  WON by odds
+     $qplsOdds = [];
+     foreach($WON as $iIndex){
+         if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+     }
+     asort($qplsOdds);
+     $WON = array_keys($qplsOdds);
+
+    $redQplValues = array_intersect($allQplValues, $reds);
+    $blackQplValues = array_intersect($allQplValues, $blacks);
+    $remains = array_diff($runners, $allQplValues);
+    $redOthers = array_intersect($remains, $reds);
+    $blackOthers = array_intersect($remains, $blacks);
+
+    $sPrimes = array_intersect($allQplValues, $primes);
+    $primesMajority = count($allQplValues) < 2 * count($sPrimes);
 
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
-    $racetext .= "\t\t'qpl/trio' =>  $QPLText ,\n";
-    $racetext .= "\t\t'All QPL values'      =>  '" . implode(", ", $allQplValues). "',\n";
+    $racetext .= "\t\t'qpl/trio'       =>  $QPLText ,\n";
     $racetext .= "\t\t'new 2 qpl/trio' =>  $new2QPLText ,\n";
     $racetext .= "\t\t'new 3 qpl/trio' =>  $new3QPLText ,\n";
-    sort($new2QplValues);
-    sort($new3QplValues);
-    $racetext .= "\t\t'New 2 QPL values' =>  '" . implode(", ", $new2QplValues). "',\n";
-    $racetext .= "\t\t'New 3 QPL values' =>  '" . implode(", ", $new3QplValues). "',\n";
-    $racetext .= "\t\t'Tce'            =>  '" . implode(", ", $tce). "',\n";
-    $racetext .= "\t\t'diff1'          =>  '" . implode(", ", $diff1). "',\n";
-    $racetext .= "\t\t'diff2'          =>  '" . implode(", ", $diff2). "',\n";
-    $racetext .= "\t\t'inter'          =>  '" . implode(", ", $inter). "',\n";
-    $racetext .= "\t\t'Win'          =>  '" . implode(", ", $X). "',\n";
-    if(count($X) >= 4) $racetext .= "\t\t'Qin'          =>  '" . implode(", ", $X). "',\n";
+    $racetext .= "\t\t'All QPL values'    =>  '" . implode(", ", $allQplValues). "',\n";
+    $racetext .= "\t\t'New 2 QPL values'  =>  '" . implode(", ", $new2QplValues). "',\n";
+    $racetext .= "\t\t'New 3 QPL values'  =>  '" . implode(", ", $new3QplValues). "',\n";
+    
+    if($primesMajority){
+        $racetext .= "\t\t//Primes majority,\n";
+        $racetext .= "\t\t'primes' =>  '" . implode(", ", $sPrimes). "',\n";
+    }
+
+    $forReference = array_diff($allQplValues, $allWinsValues);
+    $forRefPrimes = array_intersect($forReference, $primes);
+    $countPrimes1 = count($forRefPrimes);
+    $racetext .= "\t\t'For reference  ' =>  '" . implode(", ", $forReference). "',//number of primes: $countPrimes1\n";
+    $allWinsPrimes = array_intersect($allWinsValues, $primes);
+    $countPrimes2 = count($allWinsPrimes);
+    $racetext .= "\t\t'All wins values' =>  '" . implode(", ", $allWinsValues). "',//number of primes: $countPrimes2\n";
+    $weird = array_diff($runners, $allQplValues);
+    $weirdPrimes = array_intersect($weird, $primes);
+    $countPrimes3 = count($weirdPrimes);
+    $racetext .= "\t\t'Remaining' =>  '" . implode(", ", $weird). "',//number of primes: $countPrimes3,\n";
+    $first6 = array_slice($allQplValues, 0, 6);
+    $iiiinter = array_intersect($first6, $allWinsValues);
+    if(count( $iiiinter) >= 3){
+        sort($first6);
+        $racetext .= "\t\t'tce' =>  '" . implode(", ", $first6). "',\n";
+    }
+   
     $racetext .= "\t],\n";
     unset($oldWINS);
     unset($oldQPLTrio);
-    $showRace = count($X) > 2;
-    if($showRace) $outtext .= $racetext;
+    $outtext .= $racetext;
 }
 
 $outtext .= "];\n";

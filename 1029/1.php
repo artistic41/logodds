@@ -57,7 +57,7 @@ return [
 		'qpl/trio'       =>  [[5, 12, 3, 8, 4], [8, 2, 5, 3, 4], [8, 2, 5, 12, 4]] ,
 		'new 2 qpl/trio' =>  [[8, 2, 5, 3, 4], [8, 2, 5, 12, 4], [5, 12, 3, 8, 4]] ,
 		'new 3 qpl/trio' =>  [] ,
-		'All QPL values'    =>  '8, 5, 12, 3, 4, 2',
+		'All QPL values'    =>  '5, 8, 12, 3, 4, 2',
 		'New 2 QPL values'  =>  '8, 5, 12, 3, 4, 2',
 		'New 3 QPL values'  =>  '',
 		'For reference  ' =>  '8, 12, 3',//number of primes: 1
@@ -94,15 +94,15 @@ return [
 		'New 3 QPL values'  =>  '8, 5, 1, 6, 10, 11',
 		'For reference  ' =>  '1, 10, 11',//number of primes: 1
 		'All wins values' =>  '5, 6, 8',//number of primes: 1
-		'Remaining' =>  '7, 12, 9, 3, 4, 2',//number of primes: 3,
+		'Remaining' =>  '12, 7, 9, 3, 4, 2',//number of primes: 3,
 		'diff' =>  '10',
 	],
 	'9' => [
 		/**
 		Race 9
 		*/
-		'wins' =>  [[5, 10], [5], [5, 4]] ,
-		'qpl/trio'       =>  [[3, 12, 6, 5, 10], [3, 12, 10, 5, 4], [10, 6, 12, 4, 5], [10, 6, 3, 4, 5]] ,
+		'wins' =>  [[5, 10], [5], [5, 4], [4]] ,
+		'qpl/trio'       =>  [[3, 12, 6, 5, 10], [3, 12, 10, 5, 4], [10, 6, 12, 4, 5], [10, 6, 3, 4, 5], [10, 6, 3, 12, 4]] ,
 		'new 2 qpl/trio' =>  [[3, 12, 6, 5, 10], [3, 12, 10, 5, 4], [10, 6, 12, 4, 5], [10, 6, 3, 4, 5]] ,
 		'new 3 qpl/trio' =>  [] ,
 		'All QPL values'    =>  '10, 3, 12, 5, 6, 4',

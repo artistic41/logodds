@@ -321,7 +321,8 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     }
     $first6 = array_slice($allQplValues, 0, 6);
     $iiiinter = array_intersect($first6, $allWinsValues);
-    if(count( $iiiinter) >= 3){
+    if(count($iiiinter) >= 3 && count($allQplValues) > 6 ){
+        $racetext .= "\t\t'WIN' =>  '" . implode(", ", $allWinsValues). "',\n";
         sort($first6);
         $racetext .= "\t\t'tce??' =>  '" . implode(", ", $first6). "',\n";
     }

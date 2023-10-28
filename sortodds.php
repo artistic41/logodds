@@ -81,6 +81,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             if(isset($oldRaceData['wins'])) $oldWINS = $oldRaceData['wins'];
             if(isset($oldRaceData['qpl/trio'])) $oldQPLTrio = $oldRaceData['qpl/trio'];
             if(isset($oldRaceData['Remaining'])) $oldRemaining = explode(", ", $oldRaceData['Remaining']);
+            if(isset($oldRaceData['diff'])) $oldDiff = explode(", ", $oldRaceData['diff']);
         }
     }
     $racetext = "";
@@ -313,6 +314,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t'Remaining' =>  '" . implode(", ", $weird). "',//number of primes: $countPrimes3,\n";
     if(isset($oldRemaining)){
         $diffRemaining = array_diff($oldRemaining, $weird);
+        if(isset($oldDiff)) {
+            $diffRemaining = array_values(array_unique(array_merge($diffRemaining, $oldDiff)));
+        }
         $racetext .= "\t\t'diff' =>  '" . implode(", ", $diffRemaining). "',\n";
     }
     $first6 = array_slice($allQplValues, 0, 6);

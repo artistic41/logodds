@@ -121,9 +121,9 @@ return [
 		'qpl/trio'       =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9]] ,
 		'new 2 qpl/trio' =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9]] ,
 		'new 3 qpl/trio' =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9]] ,
-		'All QPL values'    =>  '4, 8, 7, 11, 2, 9',
-		'New 2 QPL values'  =>  '4, 8, 7, 11, 2, 9',
-		'New 3 QPL values'  =>  '4, 8, 7, 11, 2, 9',
+		'All QPL values'    =>  '4, 8, 11, 7, 2, 9',
+		'New 2 QPL values'  =>  '4, 8, 11, 7, 2, 9',
+		'New 3 QPL values'  =>  '4, 8, 11, 7, 2, 9',
 		'For reference  ' =>  '4, 11, 2',//number of primes: 2
 		'All wins values' =>  '7, 8, 9',//number of primes: 1
 		'Remaining' =>  '6, 1, 12, 10, 3, 5',//number of primes: 2,

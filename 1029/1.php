@@ -15,7 +15,7 @@ return [
 		'Place' =>  '1',
 		//HEDGE BETS,
 		'Trio/Qin' =>  '1, 5, 7, 12',
-		'Hedge Place' =>  '8, 3',
+		'Hedge Place' =>  '3, 8',
 	],
 	'3' => [
 		/**
@@ -58,7 +58,7 @@ return [
 		'new 2 qpl/trio' =>  [[8, 2, 5, 3, 4], [8, 2, 5, 12, 4], [5, 12, 3, 8, 4]] ,
 		'new 3 qpl/trio' =>  [] ,
 		'All QPL values'    =>  '5, 8, 12, 3, 4, 2',
-		'New 2 QPL values'  =>  '5, 8, 12, 3, 4, 2',
+		'New 2 QPL values'  =>  '5, 8, 3, 12, 4, 2',
 		'New 3 QPL values'  =>  '',
 		'Place' =>  '5',
 		//HEDGE BETS,
@@ -111,7 +111,7 @@ return [
 		'Place' =>  '5',
 		//HEDGE BETS,
 		'Trio/Qin' =>  '3, 12, 6',
-		'Hedge Place' =>  '1, 8',
+		'Hedge Place' =>  '1, 9',
 	],
 	'10' => [
 		/**

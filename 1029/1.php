@@ -32,7 +32,6 @@ return [
 		'All wins values' =>  '2, 6, 11',//number of primes: 2
 		'Remaining' =>  '3, 5, 8, 4, 7, 10, 9',//number of primes: 3,
 		'diff' =>  '',
-		'WIN' =>  '1, 12',
 		'tce??' =>  '1, 2, 6, 11, 12',
 	],
 	'4' => [
@@ -98,7 +97,6 @@ return [
 		'All wins values' =>  '5, 6, 8',//number of primes: 1
 		'Remaining' =>  '12, 7, 9, 4, 3, 2',//number of primes: 3,
 		'diff' =>  '10',
-		'WIN' =>  '1, 10, 11',
 		'tce??' =>  '1, 5, 6, 8, 10, 11',
 	],
 	'9' => [
@@ -132,7 +130,6 @@ return [
 		'All wins values' =>  '7, 8, 9',//number of primes: 1
 		'Remaining' =>  '6, 1, 12, 10, 3, 5',//number of primes: 2,
 		'diff' =>  '11, ',
-		'WIN' =>  '4, 11, 2',
 		'tce??' =>  '2, 4, 7, 8, 9, 11',
 	],
 ];

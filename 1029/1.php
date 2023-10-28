@@ -5,17 +5,17 @@ return [
 		/**
 		Race 1
 		*/
-		'wins' =>  [[4, 11]] ,
+		'wins' =>  [[4, 11], [5]] ,
 		'qpl/trio'       =>  [[1, 7, 5, 4, 11], [1, 5, 12, 4, 11]] ,
 		'new 2 qpl/trio' =>  [[1, 7, 5, 4, 11], [1, 5, 12, 4, 11]] ,
 		'new 3 qpl/trio' =>  [] ,
-		'All QPL values'    =>  '1, 4, 11, 5, 7, 12',
-		'New 2 QPL values'  =>  '1, 4, 11, 5, 7, 12',
+		'All QPL values'    =>  '1, 11, 4, 5, 7, 12',
+		'New 2 QPL values'  =>  '1, 11, 4, 5, 7, 12',
 		'New 3 QPL values'  =>  '',
 		'Place' =>  '1',
 		//HEDGE BETS,
-		'Trio/Qin' =>  '1, 5, 7, 12',
-		'Hedge Place' =>  '3, 8',
+		'Trio/Qin' =>  '1, 7, 12',
+		'Hedge Place' =>  '3, 6',
 	],
 	'3' => [
 		/**
@@ -121,12 +121,12 @@ return [
 		'qpl/trio'       =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9], [4, 11, 1, 8, 7], [4, 11, 1, 8, 9]] ,
 		'new 2 qpl/trio' =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9], [4, 11, 1, 8, 9], [4, 11, 1, 8, 7]] ,
 		'new 3 qpl/trio' =>  [[4, 2, 8, 7, 9], [4, 11, 8, 7, 9]] ,
-		'All QPL values'    =>  '4, 8, 11, 9, 7, 2, 1',
-		'New 2 QPL values'  =>  '4, 8, 11, 9, 7, 2, 1',
-		'New 3 QPL values'  =>  '4, 8, 11, 9, 7, 2',
+		'All QPL values'    =>  '4, 8, 11, 7, 9, 1, 2',
+		'New 2 QPL values'  =>  '4, 8, 11, 7, 9, 1, 2',
+		'New 3 QPL values'  =>  '4, 8, 11, 7, 9, 2',
 		'Place' =>  '4',
 		//HEDGE BETS,
-		'Trio/Qin' =>  '4, 11, 2, 1',
+		'Trio/Qin' =>  '4, 11, 1, 2',
 		'Hedge Place' =>  '6, 12',
 	],
 ];

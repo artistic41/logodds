@@ -15,7 +15,7 @@ return [
 		'Place' =>  '1',
 		//HEDGE BETS,
 		'Trio/Qin' =>  '1, 7, 12',
-		'Hedge Place' =>  '3, 6',
+		'Hedge Place' =>  '8, 3',
 	],
 	'3' => [
 		/**

@@ -323,7 +323,8 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $iiiinter = array_intersect($first6, $allWinsValues);
     if(count( $iiiinter) >= 3){
         sort($first6);
-        $racetext .= "\t\t'tce' =>  '" . implode(", ", $first6). "',\n";
+        $racetext .= "\t\t'WIN' =>  '" . implode(", ", $forReference). "',\n";
+        $racetext .= "\t\t'tce??' =>  '" . implode(", ", $first6). "',\n";
     }
    
     $racetext .= "\t],\n";

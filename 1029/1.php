@@ -97,7 +97,7 @@ return [
 		'For reference  ' =>  '1, 11, 10',//number of primes: 1
 		'All wins values' =>  '5, 6, 8',//number of primes: 1
 		'Remaining' =>  '7, 12, 9, 4, 3, 2',//number of primes: 3,
-		'diff' =>  '',
+		'diff' =>  '10',
 		'tce' =>  '1, 5, 6, 8, 10, 11',
 	],
 	'9' => [

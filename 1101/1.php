@@ -9,12 +9,12 @@ return [
 		'qpl/trio'       =>  [[6, 11, 1, 8, 7]] ,
 		'new 2 qpl/trio' =>  [[6, 11, 1, 8, 7]] ,
 		'new 3 qpl/trio' =>  [] ,
-		'All QPL values'    =>  '6, 11, 1, 8, 7',
-		'New 2 QPL values'  =>  '6, 11, 1, 8, 7',
+		'All QPL values'    =>  '6, 1, 11, 8, 7',
+		'New 2 QPL values'  =>  '6, 1, 11, 8, 7',
 		'New 3 QPL values'  =>  '',
 		'Place' =>  '6',
 		//HEDGE BETS,
-		'Trio/Qin' =>  '6, 11, 1',
+		'Trio/Qin' =>  '6, 1, 11',
 		'Hedge Place' =>  '9, 4',
 	],
 	'4' => [
@@ -37,33 +37,33 @@ return [
 		/**
 		Race 5
 		*/
-		'wins' =>  [[9]] ,
+		'wins' =>  [[9], [8, 6, 9]] ,
 		'qpl/trio'       =>  [[8, 4, 6, 12, 9]] ,
 		'new 2 qpl/trio' =>  [] ,
-		'new 3 qpl/trio' =>  [] ,
-		'All QPL values'    =>  '8, 9, 4, 12, 6',
+		'new 3 qpl/trio' =>  [[8, 4, 6, 12, 9]] ,
+		'All QPL values'    =>  '8, 9, 4, 6, 12',
 		'New 2 QPL values'  =>  '',
-		'New 3 QPL values'  =>  '',
+		'New 3 QPL values'  =>  '8, 9, 4, 6, 12',
 		'Place' =>  '8',
 		//HEDGE BETS,
-		'Trio/Qin' =>  '8, 4, 12, 6',
+		'Trio/Qin' =>  '4, 12',
 		'Hedge Place' =>  '2, 5',
 	],
 	'6' => [
 		/**
 		Race 6
 		*/
-		'wins' =>  [[5]] ,
-		'qpl/trio'       =>  [[3, 1, 4, 8, 5]] ,
-		'new 2 qpl/trio' =>  [] ,
+		'wins' =>  [[5], [5, 4]] ,
+		'qpl/trio'       =>  [[3, 1, 4, 8, 5], [3, 1, 6, 5, 4]] ,
+		'new 2 qpl/trio' =>  [[3, 1, 4, 8, 5], [3, 1, 6, 5, 4]] ,
 		'new 3 qpl/trio' =>  [] ,
-		'All QPL values'    =>  '3, 1, 5, 4, 8',
-		'New 2 QPL values'  =>  '',
+		'All QPL values'    =>  '3, 1, 5, 4, 8, 6',
+		'New 2 QPL values'  =>  '3, 1, 5, 4, 8, 6',
 		'New 3 QPL values'  =>  '',
 		'Place' =>  '3',
 		//HEDGE BETS,
-		'Trio/Qin' =>  '3, 1, 4, 8',
-		'Hedge Place' =>  '12, 7',
+		'Trio/Qin' =>  '3, 1, 8, 6',
+		'Hedge Place' =>  '7, 12',
 	],
 	'7' => [
 		/**
@@ -97,7 +97,7 @@ return [
 		'Place' =>  '2',
 		//HEDGE BETS,
 		'Trio/Qin' =>  '4, 6, 3',
-		'Hedge Place' =>  '11, 12',
+		'Hedge Place' =>  '11, 8',
 	],
 	'9' => [
 		/**

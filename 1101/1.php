@@ -7,15 +7,15 @@ return [
 		*/
 		'wins' =>  [[8, 7]] ,
 		'qpl/trio'       =>  [[6, 11, 1, 8, 7]] ,
-		'All QPL values'    =>  '6, 11, 1, 7, 8',
+		'All QPL values'    =>  '6, 1, 11, 7, 8',
 		'favorite' =>  6 ,
 		'all wins values'  =>  '7, 8 //count: 2',
-		'for reference  '  =>  '6, 11, 1',
+		'for reference  '  =>  '6, 1, 11',
 		'weird values   '  =>  '9, 4, 10, 12, 3, 5, 2',
-		'small set  '  =>  '6, 11, 1',
+		'small set  '  =>  '6, 1, 11',
 		'medium set '  =>  '',
 		'big set    '  =>  '',
-		'Qqpl' =>  '6, 11, 1',
+		'Qqpl' =>  '6, 1, 11',
 	],
 	'4' => [
 		/**
@@ -27,7 +27,7 @@ return [
 		'favorite' =>  1 ,
 		'all wins values'  =>  '9 //count: 1',
 		'for reference  '  =>  '1, 6, 10, 12',
-		'weird values   '  =>  '3, 8, 5, 2, 7, 11, 4',
+		'weird values   '  =>  '3, 8, 2, 5, 7, 11, 4',
 		'small set  '  =>  '1, 6, 10',
 		'medium set '  =>  '',
 		'big set    '  =>  '12',

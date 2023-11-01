@@ -5,17 +5,18 @@ return [
 		/**
 		Race 2
 		*/
-		'wins' =>  [[8, 7], [11, 7]] ,
-		'qpl/trio'       =>  [[6, 11, 1, 8, 7]] ,
-		'All QPL values'    =>  '6, 11, 1, 8, 7',
+		'wins' =>  [[8, 7], [11, 7], [11]] ,
+		'qpl/trio'       =>  [[6, 11, 1, 8, 7], [6, 4, 1, 7, 11]] ,
+		'All QPL values'    =>  '6, 11, 1, 8, 4, 7',
 		'favorite' =>  6 ,
 		'all wins values'  =>  '11, 8, 7 //count: 3',
-		'for reference  '  =>  '6, 1',
-		'weird values   '  =>  '4, 12, 9, 10, 3, 5, 2',
+		'for reference  '  =>  '6, 1, 4',
+		'weird values   '  =>  '12, 9, 10, 3, 5, 2',
 		'small set  '  =>  '6',
-		'medium set '  =>  '1',
+		'medium set '  =>  '1, 4',
 		'big set    '  =>  '',
-		'Tce' =>  '6, 11, 1, 8, 7',
+		'Qqpl' =>  '6, 1, 4',
+		'Tce' =>  '6, 11, 1, 8, 4, 7',
 	],
 	'4' => [
 		/**

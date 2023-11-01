@@ -205,13 +205,16 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         }
     }
 
+    $showRace = true;
+
     //Sort  allWinsValues by odds
     $qplsOdds = [];
-    foreach($allWinsValues as $iIndex){
+    foreach($allWinsValues as $iKey => $iIndex){
         if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+        else $showRace = false;
     }
     asort($qplsOdds);
-   $allWinsValues = array_keys($qplsOdds);
+    $allWinsValues = array_keys($qplsOdds);
 
     $racetext .= "\t\t'wins' =>  $WINSText ,\n";
     $racetext .= "\t\t'qpl/trio'       =>  $QPLText ,\n";
@@ -243,10 +246,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             if($allOdds[$raceNumber][$putain] > $allOdds[$raceNumber][$higherBound]) $bigSet[] = $putain;
         }
         
-        if( count($allWinsValues) > 1 && count($smallSet) === 1 && empty($mediumSet)){
-            $racetext .= "\t\t'Place'  =>  '" . $smallSet[0] . "',\n";
-            $racetext .= "\t\t'Hedge Place'  =>  '" . end($allQplValues) . "',\n";
-        }
         $racetext .= "\t\t'small set  '  =>  '" . implode(", ", $smallSet). "',\n";
         $racetext .= "\t\t'medium set '  =>  '" . implode(", ", $mediumSet). "',\n";
         $racetext .= "\t\t'big set    '  =>  '" . implode(", ", $bigSet). "',\n";
@@ -268,7 +267,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t],\n";
     unset($oldWINS);
     unset($oldQPLTrio);
-    $outtext .= $racetext;
+    if($showRace) $outtext .= $racetext;
 }
 
 $outtext .= "];\n";

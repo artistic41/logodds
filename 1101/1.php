@@ -28,7 +28,7 @@ return [
 		'favorite' =>  1 ,
 		'all wins values'  =>  '9 //count wins: 1',
 		'for reference  '  =>  '1, 6, 12, 10 //count ref: 4',
-		'weird values   '  =>  '8, 3, 2, 5, 7, 11, 4',
+		'weird values   '  =>  '3, 8, 2, 5, 7, 11, 4',
 		'small set  '  =>  '1, 6, 12, 10',
 		'medium set '  =>  '',
 		'big set    '  =>  '',
@@ -57,7 +57,7 @@ return [
 		*/
 		'wins' =>  [[5], [5, 4], [5, 6], [6]] ,
 		'qpl/trio'       =>  [[3, 1, 4, 8, 5], [3, 1, 6, 5, 4], [3, 1, 8, 5, 6], [1, 3, 5, 8, 2]] ,
-		'All QPL values'    =>  '3, 1, 5, 8, 2, 6, 4',
+		'All QPL values'    =>  '3, 1, 5, 8, 6, 2, 4',
 		'favorite' =>  3 ,
 		'all wins values'  =>  '5, 6, 4 //count wins: 3',
 		'for reference  '  =>  '3, 1, 8, 2 //count ref: 4',
@@ -68,7 +68,7 @@ return [
 		'Qqpl' =>  '3, 1, 8, 2',
 		'Qin/Trio' =>  '3, 1, 8, 2',
 		'Place' =>  '3',
-		'Tce' =>  '3, 1, 5, 8, 2, 6',
+		'Tce' =>  '3, 1, 5, 8, 6, 2',
 	],
 	'7' => [
 		/**
@@ -80,7 +80,7 @@ return [
 		'favorite' =>  3 ,
 		'all wins values'  =>  '4, 2, 9 //count wins: 3',
 		'for reference  '  =>  '3, 1, 12 //count ref: 3',
-		'weird values   '  =>  '6, 8, 11, 10, 7, 5',
+		'weird values   '  =>  '11, 6, 8, 10, 7, 5',
 		'small set  '  =>  '3, 1',
 		'medium set '  =>  '12',
 		'big set    '  =>  '',
@@ -93,16 +93,15 @@ return [
 		*/
 		'wins' =>  [[2, 7], [4, 6, 7], [7], [6, 7, 5], [6, 7, 9], [7, 9], [6, 7]] ,
 		'qpl/trio'       =>  [[4, 6, 3, 2, 7], [2, 4, 6, 12, 7], [2, 4, 6, 7, 5], [2, 4, 6, 7, 9], [2, 4, 6, 1, 7]] ,
-		'All QPL values'    =>  '2, 7, 6, 4, 5, 1, 9, 12, 3',
+		'All QPL values'    =>  '2, 7, 6, 4, 9, 5, 1, 12, 3',
 		'favorite' =>  2 ,
-		'all wins values'  =>  '2, 7, 6, 4, 5, 9 //count wins: 6',
+		'all wins values'  =>  '2, 7, 6, 4, 9, 5 //count wins: 6',
 		'for reference  '  =>  '1, 12, 3 //count ref: 3',
 		'weird values   '  =>  '11, 8, 10',
 		'small set  '  =>  '',
-		'medium set '  =>  '1',
+		'medium set '  =>  '',
 		'big set    '  =>  '12, 3',
 		'Qqpl' =>  '1, 12, 3',
-		'Tce' =>  '2, 7, 6, 4, 5, 1',
 	],
 	'9' => [
 		/**
@@ -111,7 +110,7 @@ return [
 		'wins' =>  [[10, 4], [9]] ,
 		'qpl/trio'       =>  [[3, 1, 12, 10, 4], [3, 1, 9, 10, 4], [1, 3, 10, 8, 9]] ,
 		'All QPL values'    =>  '3, 1, 10, 9, 8, 12, 4',
-		'favorite' =>  1 ,
+		'favorite' =>  3 ,
 		'all wins values'  =>  '10, 9, 4 //count wins: 3',
 		'for reference  '  =>  '3, 1, 8, 12 //count ref: 4',
 		'weird values   '  =>  '5, 6, 11, 2, 7',
@@ -120,7 +119,7 @@ return [
 		'big set    '  =>  '',
 		'Qqpl' =>  '3, 1, 8, 12',
 		'Qin/Trio' =>  '3, 1, 8, 12',
-		'Place' =>  '1',
+		'Place' =>  '3',
 		'Tce' =>  '3, 1, 10, 9, 8, 12',
 	],
 ];

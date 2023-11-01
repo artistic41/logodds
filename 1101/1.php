@@ -39,7 +39,7 @@ return [
 		Race 5
 		*/
 		'wins' =>  [[9], [8, 6, 9], [4, 9], [8, 9]] ,
-		'qpl/trio'       =>  [[8, 4, 6, 12, 9], [8, 2, 4, 5, 9]] ,
+		'qpl/trio'       =>  [[8, 4, 6, 12, 9], [8, 2, 4, 5, 9], [2, 4, 12, 8, 9]] ,
 		'All QPL values'    =>  '8, 9, 2, 4, 6, 12, 5',
 		'favorite' =>  8 ,
 		'all wins values'  =>  '8, 9, 4, 6 //count: 4',
@@ -82,9 +82,10 @@ return [
 		'for reference  '  =>  '3, 1, 12',
 		'weird values   '  =>  '8, 11, 6, 10, 7, 5',
 		'small set  '  =>  '3, 1',
-		'medium set '  =>  '',
+		'medium set '  =>  '12',
 		'big set    '  =>  '',
 		'Qqpl' =>  '3, 1, 12',
+		'Tce' =>  '3, 1, 4, 2, 12, 9',
 	],
 	'8' => [
 		/**

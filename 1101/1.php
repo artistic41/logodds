@@ -41,9 +41,9 @@ return [
 		*/
 		'wins' =>  [[9], [8, 6, 9], [4, 9], [8, 9]] ,
 		'qpl/trio'       =>  [[8, 4, 6, 12, 9], [8, 2, 4, 5, 9], [2, 4, 12, 8, 9], [2, 12, 8, 6, 9]] ,
-		'All QPL values'    =>  '8, 6, 9, 4, 2, 12, 5',
+		'All QPL values'    =>  '8, 6, 4, 9, 2, 12, 5',
 		'favorite' =>  8 ,
-		'all wins values'  =>  '8, 6, 9, 4 //count wins: 4',
+		'all wins values'  =>  '8, 6, 4, 9 //count wins: 4',
 		'for reference  '  =>  '2, 12, 5 //count ref: 3',
 		'weird values   '  =>  '11, 1, 3, 7, 10',
 		'small set  '  =>  '',

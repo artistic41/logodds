@@ -93,16 +93,16 @@ return [
 		*/
 		'wins' =>  [[2, 7], [4, 6, 7], [7], [6, 7, 5], [6, 7, 9], [7, 9]] ,
 		'qpl/trio'       =>  [[4, 6, 3, 2, 7], [2, 4, 6, 12, 7], [2, 4, 6, 7, 5], [2, 4, 6, 7, 9], [2, 4, 6, 1, 7]] ,
-		'All QPL values'    =>  '2, 7, 6, 4, 5, 1, 9, 3, 12',
+		'All QPL values'    =>  '2, 7, 4, 6, 5, 1, 9, 3, 12',
 		'favorite' =>  2 ,
-		'all wins values'  =>  '2, 7, 6, 4, 5, 9 //count wins: 6',
+		'all wins values'  =>  '2, 7, 4, 6, 5, 9 //count wins: 6',
 		'for reference  '  =>  '1, 3, 12 //count ref: 3',
 		'weird values   '  =>  '11, 8, 10',
 		'small set  '  =>  '',
 		'medium set '  =>  '1',
 		'big set    '  =>  '3, 12',
 		'Qqpl' =>  '1, 3, 12',
-		'Tce' =>  '2, 7, 6, 4, 5, 1',
+		'Tce' =>  '2, 7, 4, 6, 5, 1',
 	],
 	'9' => [
 		/**

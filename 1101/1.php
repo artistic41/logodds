@@ -61,7 +61,7 @@ return [
 		'favorite' =>  3 ,
 		'all wins values'  =>  '5, 6, 4 //count wins: 3',
 		'for reference  '  =>  '3, 1, 8, 2 //count ref: 4',
-		'weird values   '  =>  '7, 9, 12, 10, 11',
+		'weird values   '  =>  '7, 9, 12, 11, 10',
 		'small set  '  =>  '3, 1',
 		'medium set '  =>  '8, 2',
 		'big set    '  =>  '',

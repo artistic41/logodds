@@ -70,6 +70,14 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(in_array($last, [11, 12, 13, 14])){
         $racetext .= "\t\t'Also Place' => '" . $first .  "',\n";
     }
+    //1. Sort  places by odds
+    $qplsOdds = [];
+    foreach($places as $iIndex){
+        if(isset($allOdds[$raceNumber][$iIndex])) $qplsOdds[$iIndex] = $allOdds[$raceNumber][$iIndex];
+    }
+    asort($qplsOdds);
+    $places = array_keys($qplsOdds);
+   
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";
     }

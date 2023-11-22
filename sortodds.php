@@ -60,11 +60,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if($pos < 6){
             $racetext .= "\t\t//In first 6 runners!\n";
         }
-        if(isset($runners[$pos - 8])) {
-            $minus8 = $runners[$pos - 8];
-            $racetext .= "\t\t'Sure Place' => '" . $minus8 .  "',\n";
-
-        }
     }
 
     if(in_array($last, [11, 12, 13, 14])){

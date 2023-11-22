@@ -17,8 +17,8 @@ return [
 		'All Runners   '  =>  '5, 11, 2, 1, 3, 7, 9, 6, 4, 10, 8, 12',
 		'Place'  => '12, 8',
 		'WP' => '5',
-		'Also Place' => '5',
 		'Sure Place' => '5',
+		'Also Place' => '5',
 		'places' => '12, 11, 10, 8, 9, 4',
 	],
 	'3' => [
@@ -35,8 +35,8 @@ return [
 		*/
 		'All Runners   '  =>  '6, 4, 8, 7, 3, 1, 9, 10, 5, 12, 2, 11',
 		'Place'  => '12, 5, 2',
-		'Also Place' => '6',
 		'Sure Place' => '8, 6, 4',
+		'Also Place' => '6',
 		'places' => '12, 10, 5, 9, 2, 11',
 	],
 	'5' => [

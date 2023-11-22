@@ -25,15 +25,11 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(isset($oldData[$raceNumber])){
             $oldRaceData = $oldData[$raceNumber];
             if(isset($oldRaceData['places'])) $oldPlaces = $oldRaceData['places'];
-            if(isset($oldRaceData['Sure Place'])) $oldSures = $oldRaceData['Sure Place'];
         }
     }
 
     if(isset($oldPlaces)) $places = explode(", ", $oldPlaces);
     else $places = [];
-
-    if(isset($oldSures)) $sures = explode(", ", $oldSures);
-    else $sures = [];
 
     $racetext = "";
     $tmpArray = $allOdds[$raceNumber];
@@ -66,12 +62,11 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         }
         if(isset($runners[$pos - 8])) {
             $minus8 = $runners[$pos - 8];
-            if($minus8 == $first && !in_array($minus8, $sures)) $sures[] = $minus8;
+            $racetext .= "\t\t'Sure Place' => '" . $minus8 .  "',\n";
+
         }
     }
-    if(!empty($sures)){
-        $racetext .= "\t\t'Sure Place' => '" . implode(", ", $sures) .  "',\n";
-    }
+
     if(in_array($last, [11, 12, 13, 14])){
         $racetext .= "\t\t'Also Place' => '" . $first .  "',\n";
     }
@@ -82,8 +77,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t],\n";
     unset($oldPlaces);
     unset($places);
-    unset($oldSures);
-    unset($sures);
     $outtext .= $racetext;
 }
 

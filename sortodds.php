@@ -77,7 +77,8 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     }
     asort($qplsOdds);
     $places = array_keys($qplsOdds);
-   
+    $after4 = array_slice($runners, 3, count($runners) - 4);
+    $places = array_intersect($places, $after4);
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";
     }

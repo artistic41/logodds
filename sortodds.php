@@ -68,12 +68,12 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             $minus8 = $runners[$pos - 8];
             if($minus8 == $first && !in_array($minus8, $sures)) $sures[] = $minus8;
         }
-        if(in_array($last, [11, 12, 13, 14])){
-            $racetext .= "\t\t'Also Place' => '" . $first .  "',\n";
-        }
     }
     if(!empty($sures)){
         $racetext .= "\t\t'Sure Place' => '" . implode(", ", $sures) .  "',\n";
+    }
+    if(in_array($last, [11, 12, 13, 14])){
+        $racetext .= "\t\t'Also Place' => '" . $first .  "',\n";
     }
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";

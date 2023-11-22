@@ -25,7 +25,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if(isset($oldData[$raceNumber])){
             $oldRaceData = $oldData[$raceNumber];
             if(isset($oldRaceData['places'])) $oldPlaces = $oldRaceData['places'];
-            if(isset($oldRaceData['WP'])) $oldWPs = $oldRaceData['WP'];
             if(isset($oldRaceData['Sure Place'])) $oldSures = $oldRaceData['Sure Place'];
             if(isset($oldRaceData['Also Place'])) $oldSures2 = $oldRaceData['Also Place'];
         }
@@ -33,9 +32,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
 
     if(isset($oldPlaces)) $places = explode(", ", $oldPlaces);
     else $places = [];
-
-    if(isset($oldWPs)) $wps = explode(", ", $oldWPs);
-    else $wps = [];
 
     if(isset($oldSures)) $sures = explode(", ", $oldSures);
     else $sures = [];
@@ -67,7 +63,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         $places = array_values(array_unique(array_merge($places, $place)));
         $racetext .= "\t\t'Place'  => '" . implode(", ", $place).  "',\n";
         if($pos == count($runners) - 1){
-            if(!in_array($first, $wps)) $wps[] = $first;
+            $racetext .= "\t\t'WP' => '" . $first .  "',\n";
         }
         if($pos < 6){
             $racetext .= "\t\t//In first 6 runners!\n";
@@ -83,9 +79,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";
     }
-    if(!empty($wps)){
-        $racetext .= "\t\t'WP' => '" . implode(", ", $wps) .  "',\n";
-    }
+    
     if(!empty($sures)){
         $racetext .= "\t\t'Sure Place' => '" . implode(", ", $sures) .  "',\n";
     }

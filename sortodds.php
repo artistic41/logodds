@@ -27,6 +27,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             if(isset($oldRaceData['places'])) $oldPlaces = $oldRaceData['places'];
             if(isset($oldRaceData['WP'])) $oldWPs = $oldRaceData['WP'];
             if(isset($oldRaceData['Sure Place'])) $oldSures = $oldRaceData['Sure Place'];
+            if(isset($oldRaceData['Also Place'])) $oldSures2 = $oldRaceData['Also Place'];
         }
     }
 
@@ -38,6 +39,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
 
     if(isset($oldSures)) $sures = explode(", ", $oldSures);
     else $sures = [];
+
+    if(isset($oldSures2)) $sures2 = explode(", ", $oldSures2);
+    else $sures2 = [];
 
     $racetext = "";
     $tmpArray = $allOdds[$raceNumber];
@@ -53,6 +57,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
 
     $first = $runners[0];
     $size = count($runners);
+    $last = end($runners);
 
     $pos = array_search($size, $runners);
     if($pos){
@@ -71,6 +76,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
             $minus8 = $runners[$pos - 8];
             if($minus8 == $first && !in_array($minus8, $sures)) $sures[] = $minus8;
         }
+        if(in_array($last, [11, 12, 13, 14])){
+            if(!in_array($first, $sures2)) $sures2[] = $first;
+        }
     }
     if(!empty($places)){
         $racetext .= "\t\t'places' => '" . implode(", ", $places).  "',\n";
@@ -81,6 +89,9 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(!empty($sures)){
         $racetext .= "\t\t'Sure Place' => '" . implode(", ", $sures) .  "',\n";
     }
+    if(!empty($sures2)){
+        $racetext .= "\t\t'Also Place' => '" . implode(", ", $sures2) .  "',\n";
+    }
     $racetext .= "\t],\n";
     unset($oldPlaces);
     unset($places);
@@ -88,6 +99,8 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     unset($wPs);
     unset($oldSures);
     unset($sures);
+    unset($oldSures2);
+    unset($sures2);
     $outtext .= $racetext;
 }
 

@@ -80,10 +80,18 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     if(!empty($places4)){
         $racetext .= "\t\t'places4' => '" . implode(", ", $places4).  "',\n";
     }
+    $set1 = [];
+    $set2 = [];
+    $set3 = [];
     for($k = 0; $k < 6; $k ++){
-        $racetext .= "\t\t'candidate". $k + 1 . "' => '" . $runners[($pos + 1 + 2*$k) % $size].  "',\n";
+        $set1[] = $runners[($pos + 1 + 2*$k) % $size];
+        $set2[] = $runners[($pos + 1 + 3*$k) % $size];
+        $set3[] = $runners[($pos + 1 + 4*$k) % $size];
     }
-    
+    $racetext .= "\t\t'set1' => '" . implode(", ", $set1).  "',\n";
+    $racetext .= "\t\t'set2' => '" . implode(", ", $set2).  "',\n";
+    $racetext .= "\t\t'set3' => '" . implode(", ", $set3).  "',\n";
+
     $racetext .= "\t],\n";
     unset($oldPlaces);
     unset($places);

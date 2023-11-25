@@ -9,12 +9,9 @@ return [
 		'Total Runners '  =>  8,
 		//In first 6 runners!
 		'places' => '5, 8, 2',
-		'candidate1' => '2',
-		'candidate2' => '1',
-		'candidate3' => '4',
-		'candidate4' => '5',
-		'candidate5' => '2',
-		'candidate6' => '1',
+		'set1' => '2, 1, 4, 5, 2, 1',
+		'set2' => '2, 9, 5, 6, 4, 8',
+		'set3' => '2, 4, 2, 4, 2, 4',
 	],
 	'2' => [
 		/**
@@ -25,12 +22,9 @@ return [
 		'Maybe WP' => '2',
 		'places' => '4, 10, 1',
 		'places4' => '4, 10, 1',
-		'candidate1' => '1',
-		'candidate2' => '9',
-		'candidate3' => '5',
-		'candidate4' => '7',
-		'candidate5' => '4',
-		'candidate6' => '1',
+		'set1' => '1, 9, 5, 7, 4, 1',
+		'set2' => '1, 3, 7, 10, 9, 8',
+		'set3' => '1, 5, 4, 9, 7, 1',
 	],
 	'3' => [
 		/**
@@ -41,12 +35,9 @@ return [
 		//In first 6 runners!
 		'places' => '3, 9, 8',
 		'places4' => '3, 9, 8',
-		'candidate1' => '8',
-		'candidate2' => '6',
-		'candidate3' => '2',
-		'candidate4' => '4',
-		'candidate5' => '9',
-		'candidate6' => '7',
+		'set1' => '8, 6, 2, 4, 9, 7',
+		'set2' => '8, 1, 4, 8, 1, 4',
+		'set3' => '8, 2, 9, 1, 3, 6',
 	],
 	'4' => [
 		/**
@@ -57,12 +48,9 @@ return [
 		'Maybe WP' => '6',
 		'places' => '7, 10, 9',
 		'places4' => '7, 10, 9',
-		'candidate1' => '9',
-		'candidate2' => '5',
-		'candidate3' => '2',
-		'candidate4' => '3',
-		'candidate5' => '7',
-		'candidate6' => '9',
+		'set1' => '9, 5, 2, 3, 7, 9',
+		'set2' => '9, 1, 3, 10, 5, 4',
+		'set3' => '9, 2, 7, 5, 3, 9',
 	],
 	'5' => [
 		/**
@@ -72,12 +60,9 @@ return [
 		'Total Runners '  =>  10,
 		'places' => '3, 10, 5',
 		'places4' => '3, 10, 5',
-		'candidate1' => '5',
-		'candidate2' => '7',
-		'candidate3' => '2',
-		'candidate4' => '9',
-		'candidate5' => '3',
-		'candidate6' => '5',
+		'set1' => '5, 7, 2, 9, 3, 5',
+		'set2' => '5, 4, 9, 10, 7, 1',
+		'set3' => '5, 2, 3, 7, 9, 5',
 	],
 	'6' => [
 		/**
@@ -87,12 +72,9 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '10, 12, 3',
 		'places4' => '10, 12, 3',
-		'candidate1' => '3',
-		'candidate2' => '2',
-		'candidate3' => '1',
-		'candidate4' => '8',
-		'candidate5' => '9',
-		'candidate6' => '10',
+		'set1' => '3, 2, 1, 8, 9, 10',
+		'set2' => '3, 5, 8, 4, 3, 5',
+		'set3' => '3, 1, 9, 3, 1, 9',
 	],
 	'7' => [
 		/**
@@ -103,12 +85,9 @@ return [
 		'Maybe WP' => '6',
 		'places' => '7, 11, 10',
 		'places4' => '7, 11, 10',
-		'candidate1' => '10',
-		'candidate2' => '2',
-		'candidate3' => '4',
-		'candidate4' => '9',
-		'candidate5' => '8',
-		'candidate6' => '11',
+		'set1' => '10, 2, 4, 9, 8, 11',
+		'set2' => '10, 5, 9, 7, 6, 4',
+		'set3' => '10, 4, 8, 6, 3, 7',
 	],
 	'8' => [
 		/**
@@ -119,11 +98,8 @@ return [
 		//In first 6 runners!
 		'places' => '1, 11, 4',
 		'places4' => '1, 11, 4',
-		'candidate1' => '4',
-		'candidate2' => '8',
-		'candidate3' => '9',
-		'candidate4' => '7',
-		'candidate5' => '5',
-		'candidate6' => '11',
+		'set1' => '4, 8, 9, 7, 5, 11',
+		'set2' => '4, 3, 7, 1, 2, 9',
+		'set3' => '4, 9, 5, 2, 6, 1',
 	],
 ];

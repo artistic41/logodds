@@ -9,6 +9,12 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '7, 5, 12, 9, 2',
 		'places4' => '7, 5, 12, 9, 2',
+		'candidate1' => '9',
+		'candidate2' => '10',
+		'candidate3' => '11',
+		'candidate4' => '4',
+		'candidate5' => '6',
+		'candidate6' => '5',
 	],
 	'2' => [
 		/**
@@ -19,6 +25,12 @@ return [
 		'WP' => '5',
 		'places' => '9, 4, 10, 8, 12',
 		'places4' => '9, 4, 10, 8, 12',
+		'candidate1' => '5',
+		'candidate2' => '2',
+		'candidate3' => '3',
+		'candidate4' => '9',
+		'candidate5' => '4',
+		'candidate6' => '8',
 	],
 	'3' => [
 		/**
@@ -29,6 +41,12 @@ return [
 		'Maybe WP' => '8',
 		'places' => '11, 2, 12, 3',
 		'places4' => '11, 2, 12, 3',
+		'candidate1' => '3',
+		'candidate2' => '9',
+		'candidate3' => '5',
+		'candidate4' => '4',
+		'candidate5' => '1',
+		'candidate6' => '2',
 	],
 	'4' => [
 		/**
@@ -39,6 +57,12 @@ return [
 		'Maybe WP' => '8',
 		'places' => '10, 5, 9, 2, 12, 11',
 		'places4' => '10, 5, 9, 2, 12, 11',
+		'candidate1' => '11',
+		'candidate2' => '6',
+		'candidate3' => '10',
+		'candidate4' => '7',
+		'candidate5' => '5',
+		'candidate6' => '2',
 	],
 	'5' => [
 		/**
@@ -49,6 +73,12 @@ return [
 		//In first 6 runners!
 		'places' => '4, 5, 12, 8, 7, 9, 1',
 		'places4' => '4, 5, 12, 8, 7, 9, 1',
+		'candidate1' => '8',
+		'candidate2' => '9',
+		'candidate3' => '1',
+		'candidate4' => '2',
+		'candidate5' => '11',
+		'candidate6' => '5',
 	],
 	'6' => [
 		/**
@@ -58,6 +88,12 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '11, 2, 3, 8, 12, 10',
 		'places4' => '11, 2, 3, 8, 12, 10',
+		'candidate1' => '10',
+		'candidate2' => '9',
+		'candidate3' => '5',
+		'candidate4' => '11',
+		'candidate5' => '4',
+		'candidate6' => '8',
 	],
 	'7' => [
 		/**
@@ -67,6 +103,12 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '2, 10, 8',
 		'places4' => '2, 10, 8',
+		'candidate1' => '3',
+		'candidate2' => '2',
+		'candidate3' => '6',
+		'candidate4' => '11',
+		'candidate5' => '9',
+		'candidate6' => '4',
 	],
 	'8' => [
 		/**
@@ -76,5 +118,11 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '1, 7, 4, 12, 11',
 		'places4' => '1, 7, 4, 12, 11',
+		'candidate1' => '11',
+		'candidate2' => '10',
+		'candidate3' => '5',
+		'candidate4' => '1',
+		'candidate5' => '7',
+		'candidate6' => '4',
 	],
 ];

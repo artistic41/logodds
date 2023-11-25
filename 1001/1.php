@@ -10,7 +10,7 @@ return [
 		'Maybe WP' => '7',
 		'places' => '10, 9, 3',
 		'places4' => '9, 10, 3',
-		'candidate(k = 2, posK = 1)' => '9',
+		'candidate(k = 2, posK = 1)' => '10',
 	],
 	'2' => [
 		/**
@@ -61,7 +61,7 @@ return [
 		//In first 6 runners!
 		'places' => '5, 14, 4',
 		'places4' => '14, 4',
-		'candidate(k = 2, posK = 1)' => '5',
+		'candidate(k = 2, posK = 1)' => '11',
 	],
 	'7' => [
 		/**

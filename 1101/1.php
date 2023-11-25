@@ -10,7 +10,7 @@ return [
 		'WP' => '8',
 		'places' => '1, 9',
 		'places4' => '1, 9',
-		'candidate' => '8',
+		'candidate(k = 9, posK = 8)' => '8',
 	],
 	'2' => [
 		/**
@@ -52,7 +52,7 @@ return [
 		//In first 6 runners!
 		'places' => '9, 12, 5',
 		'places4' => '9, 12, 5',
-		'candidate' => '2',
+		'candidate(k = 4, posK = 3)' => '2',
 	],
 	'6' => [
 		/**
@@ -89,6 +89,6 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 4, 5',
 		'places4' => '4, 12, 5',
-		'candidate' => '10',
+		'candidate(k = 6, posK = 5)' => '10',
 	],
 ];

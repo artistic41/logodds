@@ -10,7 +10,7 @@ return [
 		'Maybe WP' => '7',
 		'places' => '10, 9, 3',
 		'places4' => '9, 10, 3',
-		'candidate' => '9',
+		'candidate(k = 2, posK = 1)' => '9',
 	],
 	'2' => [
 		/**
@@ -30,7 +30,7 @@ return [
 		'WP' => '5',
 		'places' => '4, 10',
 		'places4' => '4, 10',
-		'candidate' => '5',
+		'candidate(k = 10, posK = 9)' => '5',
 	],
 	'4' => [
 		/**
@@ -61,7 +61,7 @@ return [
 		//In first 6 runners!
 		'places' => '5, 14, 4',
 		'places4' => '14, 4',
-		'candidate' => '5',
+		'candidate(k = 2, posK = 1)' => '5',
 	],
 	'7' => [
 		/**
@@ -72,10 +72,10 @@ return [
 		'WP' => '1',
 		'places' => '9, 10',
 		'places4' => '9, 10',
-		'candidate' => '1',
-		'candidate' => '8',
-		'candidate' => '5',
-		'candidate' => '6',
+		'candidate(k = 10, posK = 9)' => '1',
+		'candidate(k = 9, posK = 8)' => '8',
+		'candidate(k = 6, posK = 5)' => '5',
+		'candidate(k = 5, posK = 4)' => '6',
 	],
 	'8' => [
 		/**

@@ -9,9 +9,9 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 9, 2',
 		'places4' => '9, 12, 2',
-		'candidate' => '7',
-		'candidate' => '4',
-		'candidate' => '3',
+		'candidate(k = 9, posK = 8)' => '7',
+		'candidate(k = 8, posK = 7)' => '4',
+		'candidate(k = 5, posK = 4)' => '3',
 	],
 	'2' => [
 		/**
@@ -41,7 +41,7 @@ return [
 		'WP' => '7',
 		'places' => '12, 6',
 		'places4' => '6, 12',
-		'candidate' => '7',
+		'candidate(k = 12, posK = 11)' => '7',
 	],
 	'5' => [
 		/**
@@ -61,7 +61,7 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 8, 5',
 		'places4' => '8, 12, 5',
-		'candidate' => '9',
+		'candidate(k = 6, posK = 5)' => '9',
 	],
 	'7' => [
 		/**

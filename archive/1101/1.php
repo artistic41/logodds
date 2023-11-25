@@ -21,7 +21,6 @@ return [
 		//In first 6 runners!
 		'places' => '9, 12, 7',
 		'places4' => '9, 12, 7',
-		'candidate' => '7',
 	],
 	'3' => [
 		/**
@@ -33,7 +32,6 @@ return [
 		//In first 6 runners!
 		'places' => '1, 7, 6',
 		'places4' => '1, 7, 6',
-		'candidate' => '5',
 	],
 	'4' => [
 		/**
@@ -44,7 +42,6 @@ return [
 		//In first 6 runners!
 		'places' => '6, 12, 10',
 		'places4' => '10',
-		'candidate' => '7',
 	],
 	'5' => [
 		/**
@@ -55,7 +52,7 @@ return [
 		//In first 6 runners!
 		'places' => '9, 12, 5',
 		'places4' => '9, 12, 5',
-		'candidate' => '5',
+		'candidate' => '2',
 	],
 	'6' => [
 		/**
@@ -65,7 +62,6 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '4, 12, 11',
 		'places4' => '4, 12, 11',
-		'candidate' => '5',
 	],
 	'7' => [
 		/**
@@ -75,7 +71,6 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 10, 9',
 		'places4' => '10, 12, 9',
-		'candidate' => '2',
 	],
 	'8' => [
 		/**
@@ -85,7 +80,6 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 8, 1',
 		'places4' => '8, 12, 1',
-		'candidate' => '8',
 	],
 	'9' => [
 		/**
@@ -95,6 +89,6 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '12, 4, 5',
 		'places4' => '4, 12, 5',
-		'candidate' => '8',
+		'candidate' => '10',
 	],
 ];

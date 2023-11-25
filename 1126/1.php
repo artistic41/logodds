@@ -9,7 +9,6 @@ return [
 		'Total Runners '  =>  14,
 		//In first 6 runners!
 		'places' => '6, 14, 10',
-		'candidate' => '4',
 	],
 	'2' => [
 		/**
@@ -19,7 +18,7 @@ return [
 		'Total Runners '  =>  14,
 		'places' => '5, 14, 8, 6',
 		'places4' => '5, 14, 6, 8',
-		'candidate' => '11',
+		'candidate' => '1',
 	],
 	'3' => [
 		/**
@@ -30,7 +29,8 @@ return [
 		'Maybe WP' => '4',
 		'places' => '8, 12, 10',
 		'places4' => '8, 12, 10',
-		'candidate' => '2',
+		'candidate' => '6',
+		'candidate' => '8',
 	],
 	'4' => [
 		/**
@@ -40,7 +40,8 @@ return [
 		'Total Runners '  =>  12,
 		'places' => '3, 7, 9, 12, 1, 11',
 		'places4' => '3, 7, 9, 12, 1, 11',
-		'candidate' => '8',
+		'candidate' => '6',
+		'candidate' => '9',
 	],
 	'5' => [
 		/**
@@ -51,7 +52,6 @@ return [
 		//In first 6 runners!
 		'places' => '3, 14, 10, 12',
 		'places4' => '12',
-		'candidate' => '11',
 	],
 	'6' => [
 		/**
@@ -62,6 +62,7 @@ return [
 		'places' => '6, 11, 10, 13, 14, 12',
 		'places4' => '6, 11, 10, 13, 14, 12',
 		'candidate' => '3',
+		'candidate' => '10',
 	],
 	'7' => [
 		/**
@@ -72,7 +73,6 @@ return [
 		//In first 6 runners!
 		'places' => '5, 1, 11, 10',
 		'places4' => '10',
-		'candidate' => '8',
 	],
 	'8' => [
 		/**
@@ -82,7 +82,7 @@ return [
 		'Total Runners '  =>  11,
 		'places' => '10, 6, 11, 8, 3',
 		'places4' => '10, 6, 11, 8, 3',
-		'candidate' => '1',
+		'candidate' => '4',
 	],
 	'9' => [
 		/**
@@ -92,7 +92,6 @@ return [
 		'Total Runners '  =>  14,
 		'places' => '12, 13, 14, 11, 3',
 		'places4' => '12, 13, 14, 11, 3',
-		'candidate' => '6',
 	],
 	'10' => [
 		/**
@@ -104,5 +103,6 @@ return [
 		'places' => '7, 2, 3, 11, 12',
 		'places4' => '7, 2, 3, 11, 12',
 		'candidate' => '10',
+		'candidate' => '9',
 	],
 ];

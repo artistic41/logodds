@@ -81,8 +81,13 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         $racetext .= "\t\t'places4' => '" . implode(", ", $places4).  "',\n";
     }
     
-    $racetext .= "\t\t'candidate' => '" . $runners[$size - 1 - $pos] .  "',\n";
-
+    for($k = $size; $k > 1; $k ++)
+    {
+        $posK = array_search($k, $runners);
+        if($posK + 1 == $k){
+           $racetext .= "\t\t'candidate' => '" . $runners[$k - 1 - $posK] .  "',\n";
+        }
+    }
     $racetext .= "\t],\n";
     unset($oldPlaces);
     unset($places);

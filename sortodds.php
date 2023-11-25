@@ -85,7 +85,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     {
         $posK = array_search($k, $runners);
         if($posK + 1 == $k && isset($runners[$pos - $posK])){
-           $racetext .= "\t\t'candidate' => '" . $runners[$pos - $posK] .  "',\n";
+           $racetext .= "\t\t'candidate(". "k = $k, posK = $posK)" . "' => '" . $runners[$pos - $posK] .  "',\n";
         }
     }
     $racetext .= "\t],\n";

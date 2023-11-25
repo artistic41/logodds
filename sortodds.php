@@ -42,6 +42,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
     $racetext .= "\t\t*/\n";
 
     $racetext .= "\t\t'All Runners   '  =>  '" . implode(", ", $runners).  "',\n";
+    $racetext .= "\t\t'Total Runners '  =>  " . count($runners).  ",\n";
 
     $first = $runners[0];
     $size = count($runners);

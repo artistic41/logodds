@@ -24,11 +24,12 @@ return [
 		/**
 		Race 3
 		*/
-		'All Runners   '  =>  '4, 2, 11, 6, 3, 7, 1, 9, 5, 10, 12, 8',
+		'All Runners   '  =>  '4, 2, 11, 6, 3, 7, 1, 5, 9, 10, 12, 8',
 		'Total Runners '  =>  12,
 		'places' => '9, 10, 12, 8',
 		'places4' => '9, 10, 12, 8',
 		'candidate(k = 10, posK = 9)' => '11',
+		'candidate(k = 9, posK = 8)' => '6',
 		'candidate(k = 2, posK = 1)' => '12',
 	],
 	'4' => [

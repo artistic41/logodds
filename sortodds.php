@@ -57,9 +57,6 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         if($pos == count($runners) - 1){
             $racetext .= "\t\t'WP' => '" . $first .  "',\n";
         }
-        if($pos == count($runners) - 2){
-            $racetext .= "\t\t'Maybe WP' => '" . $first .  "',\n";
-        }
         if($pos < 6){
             $racetext .= "\t\t//In first 6 runners!\n";
         }

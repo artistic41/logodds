@@ -101,12 +101,11 @@ return [
 		/**
 		Race 10
 		*/
-		'All Runners   '  =>  '10, 9, 1, 4, 7, 5, 2, 3, 6, 11, 8, 12',
+		'All Runners   '  =>  '10, 9, 4, 1, 7, 5, 2, 3, 6, 11, 8, 12',
 		'Total Runners '  =>  12,
 		'WP' => '10',
 		'places' => '7, 2, 3, 11, 8, 12',
 		'places4' => '7, 2, 3, 11, 8, 12',
 		'candidate(k = 12, posK = 11)' => '10',
-		'candidate(k = 4, posK = 3)' => '6',
 	],
 ];

@@ -76,12 +76,12 @@ return [
 		/**
 		Race 8
 		*/
-		'All Runners   '  =>  '4, 2, 9, 10, 1, 11, 6, 8, 3, 7, 5',
+		'All Runners   '  =>  '4, 2, 9, 1, 10, 11, 6, 8, 7, 3, 5',
 		'Total Runners '  =>  11,
 		//In first 6 runners!
-		'places' => '10, 1, 11, 6, 8, 3',
-		'places4' => '10, 1, 11, 6, 8, 3',
-		'candidate(k = 8)' => '10',
+		'places' => '1, 10, 11, 6, 8, 3',
+		'places4' => '1, 10, 11, 6, 8, 3',
+		'candidate(k = 8)' => '1',
 	],
 	'9' => [
 		/**

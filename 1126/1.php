@@ -15,35 +15,30 @@ return [
 		/**
 		Race 2
 		*/
-		'All Runners   '  =>  '2, 7, 1, 11, 4, 5, 6, 3, 9, 10, 8, 13, 14, 12',
-		'Total Runners '  =>  14,
-		'places' => '5, 6, 8, 13, 14, 12',
-		'places4' => '5, 6, 8, 13, 14, 12',
-		'candidate(k = 10, posK = 9)' => '4',
-		'candidate(k = 9, posK = 8)' => '5',
+		'All Runners   '  =>  '2, 7, 4, 1, 6, 3, 9, 5, 10, 13, 8, 14, 12',
+		'Total Runners '  =>  13,
+		'places' => '6, 5, 10, 13, 8, 14, 12',
+		'places4' => '6, 5, 10, 13, 8, 14, 12',
 	],
 	'3' => [
 		/**
 		Race 3
 		*/
-		'All Runners   '  =>  '4, 2, 11, 3, 6, 7, 1, 5, 9, 10, 8, 12',
+		'All Runners   '  =>  '4, 2, 11, 3, 6, 7, 1, 5, 9, 12, 10, 8',
 		'Total Runners '  =>  12,
-		'WP' => '4',
-		'places' => '10, 8, 12',
-		'places4' => '10, 8, 12',
-		'candidate(k = 12, posK = 11)' => '4',
-		'candidate(k = 10, posK = 9)' => '11',
+		'places' => '9, 12, 10, 8',
+		'places4' => '9, 12, 10, 8',
 		'candidate(k = 9, posK = 8)' => '3',
-		'candidate(k = 2, posK = 1)' => '8',
+		'candidate(k = 2, posK = 1)' => '10',
 	],
 	'4' => [
 		/**
 		Race 4
 		*/
-		'All Runners   '  =>  '4, 2, 6, 3, 8, 10, 7, 12, 1, 9, 5, 11',
+		'All Runners   '  =>  '4, 2, 6, 3, 8, 10, 7, 12, 9, 1, 5, 11',
 		'Total Runners '  =>  12,
 		'places' => '3, 10, 7, 12, 9, 1, 5, 11',
-		'places4' => '3, 10, 7, 12, 1, 9, 5, 11',
+		'places4' => '3, 10, 7, 12, 9, 1, 5, 11',
 		'candidate(k = 7, posK = 6)' => '10',
 		'candidate(k = 2, posK = 1)' => '5',
 	],

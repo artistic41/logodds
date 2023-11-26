@@ -15,7 +15,7 @@ return [
 		/**
 		Race 2
 		*/
-		'All Runners   '  =>  '2, 7, 1, 11, 4, 5, 3, 6, 9, 10, 8, 13, 14, 12',
+		'All Runners   '  =>  '2, 7, 1, 11, 4, 5, 6, 3, 9, 10, 8, 13, 14, 12',
 		'Total Runners '  =>  14,
 		'places' => '5, 6, 8, 13, 14, 12',
 		'places4' => '5, 6, 8, 13, 14, 12',
@@ -40,10 +40,10 @@ return [
 		/**
 		Race 4
 		*/
-		'All Runners   '  =>  '4, 2, 6, 3, 8, 10, 7, 12, 9, 1, 5, 11',
+		'All Runners   '  =>  '4, 2, 6, 3, 8, 10, 7, 12, 1, 9, 5, 11',
 		'Total Runners '  =>  12,
 		'places' => '3, 10, 7, 12, 9, 1, 5, 11',
-		'places4' => '3, 10, 7, 12, 9, 1, 5, 11',
+		'places4' => '3, 10, 7, 12, 1, 9, 5, 11',
 		'candidate(k = 7, posK = 6)' => '10',
 		'candidate(k = 2, posK = 1)' => '5',
 	],
@@ -51,7 +51,7 @@ return [
 		/**
 		Race 5
 		*/
-		'All Runners   '  =>  '3, 14, 10, 12, 5, 2, 7, 13, 1, 6, 9, 11, 4, 8',
+		'All Runners   '  =>  '3, 14, 10, 12, 5, 2, 7, 13, 1, 6, 9, 4, 11, 8',
 		'Total Runners '  =>  14,
 		//In first 6 runners!
 		'places' => '3, 14, 10, 12',
@@ -61,11 +61,11 @@ return [
 		/**
 		Race 6
 		*/
-		'All Runners   '  =>  '2, 5, 3, 1, 9, 7, 4, 11, 6, 10, 14, 12, 13, 8',
+		'All Runners   '  =>  '2, 5, 3, 1, 7, 9, 4, 11, 6, 10, 14, 12, 13, 8',
 		'Total Runners '  =>  14,
 		'places' => '11, 6, 10, 14, 12, 13',
 		'places4' => '11, 6, 10, 14, 12, 13',
-		'candidate(k = 10, posK = 9)' => '9',
+		'candidate(k = 10, posK = 9)' => '7',
 		'candidate(k = 3, posK = 2)' => '12',
 	],
 	'7' => [
@@ -82,11 +82,12 @@ return [
 		/**
 		Race 8
 		*/
-		'All Runners   '  =>  '2, 4, 9, 1, 10, 11, 6, 8, 3, 7, 5',
+		'All Runners   '  =>  '4, 2, 9, 1, 10, 11, 6, 8, 3, 7, 5',
 		'Total Runners '  =>  11,
 		//In first 6 runners!
 		'places' => '10, 11, 6, 8, 3',
 		'places4' => '10, 11, 6, 8, 3',
+		'candidate(k = 2, posK = 1)' => '7',
 	],
 	'9' => [
 		/**

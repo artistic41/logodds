@@ -56,7 +56,7 @@ return [
 		'Total Runners '  =>  14,
 		'places' => '11, 6, 10, 13, 14, 12',
 		'places4' => '11, 6, 10, 13, 14, 12',
-		'candidate(k = 10, posK = 9)' => '7',
+		'candidate(k = 10)' => '7',
 	],
 	'7' => [
 		/**
@@ -96,6 +96,6 @@ return [
 		'WP' => '10',
 		'places' => '7, 2, 3, 11, 8, 12',
 		'places4' => '7, 2, 3, 11, 8, 12',
-		'candidate(k = 12, posK = 11)' => '10',
+		'candidate(k = 12)' => '10',
 	],
 ];

@@ -43,7 +43,7 @@ return [
 		/**
 		Race 5
 		*/
-		'All Runners   '  =>  '3, 14, 10, 12, 2, 13, 5, 7, 1, 6, 9, 4, 11, 8',
+		'All Runners   '  =>  '3, 14, 10, 12, 5, 2, 7, 13, 1, 6, 9, 4, 11, 8',
 		'Total Runners '  =>  14,
 		//In first 6 runners!
 		'places' => '3, 14, 10, 12',

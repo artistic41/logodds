@@ -78,7 +78,7 @@ for ($raceNumber = 1; $raceNumber <= $totalRaces; $raceNumber++) {
         $racetext .= "\t\t'places4' => '" . implode(", ", $places4).  "',\n";
     }
     
-    for($k = $size; $k > 1; $k --)
+    for($k = $size; $k > floor($size / 2); $k --)
     {
         $posK = array_search($k, $runners);
         if($posK + 1 == $k && isset($runners[$pos - $posK])){

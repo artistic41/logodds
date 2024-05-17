@@ -53,7 +53,7 @@ foreach($history as $version){
             }
         }
     }
-    exec("git checkout main");
+    exec("git checkout master");
 }
 foreach($matrix as $raceDate => $data){
     $outtext .= "\t'$raceDate' => [\n";
@@ -64,5 +64,5 @@ foreach($matrix as $raceDate => $data){
 }
 $outtext .= "];\n?>";
 file_put_contents($outFile, $outtext);
-exec("git checkout main; git add favorites.php;");
+exec("git checkout master; git add favorites.php;");
 ?>
